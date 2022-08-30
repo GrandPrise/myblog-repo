@@ -27,7 +27,7 @@ class CategoryFormRequest extends FormRequest
             'name'=>'bail|string|required|max:200',
             'slug'=>'bail|string|required',
             'description'=>'required',
-            'image'=>'bail|required|mimes:png,jpg,jpeg|max:2048',
+            'image'=>'bail|mimes:png,jpg,jpeg|max:2048',
             'meta_title'=>'bail|string|required|max:200',
             'meta_description'=>'required|string',
             'meta_keyword'=>'bail|required|string',
