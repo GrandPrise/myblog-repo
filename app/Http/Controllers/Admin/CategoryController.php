@@ -46,7 +46,7 @@ class CategoryController extends Controller
 
         $category->save();
 
-        return redirect(route('category'))->with('success', 'Category added successfully');
+        return redirect(route('categories'))->with('success', 'Category added successfully');
     }
 
     public function show($id)
@@ -91,7 +91,7 @@ class CategoryController extends Controller
 
         $category->update();
 
-        return redirect(route('category'))->with('success', 'Category updated successfully');
+        return redirect(route('categories'))->with('success', 'Category updated successfully');
     }
 
     public function destroy($id)
@@ -105,9 +105,9 @@ class CategoryController extends Controller
             }
 
             $category->delete();
-            return redirect(route('category'))->with('success', 'Category was deleted successfully');
+            return redirect(route('categories'))->with('success', 'Category was deleted successfully');
         } else {
-            return redirect(route('category'))->with('error', 'Category doesn\'t exist!');
+            return redirect(route('categories'))->with('error', 'Category doesn\'t exist!');
         }
     }
 }
