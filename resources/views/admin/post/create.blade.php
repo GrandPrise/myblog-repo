@@ -21,11 +21,18 @@
                 <div class="mb-3">
                     <label for="name">Category :</label>
                     <select name="category_id" class="form-control" required>
-                        <option value="">---Select Category---</option>
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->id }}" {{ $post->category_id == $category->id ? 'selected' : '' }}>
-                                {{ $category->name }}</option>
-                        @endforeach
+                        @if (isset($post))
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}"
+                                    {{ $post->category_id == $category->id ? 'selected' : '' }}>
+                                    {{ $category->name }}</option>
+                            @endforeach
+                        @else
+                            <option value="">---Select Category---</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}
+                            @endforeach
+                        @endif
                     </select>
                 </div>
 
@@ -54,7 +61,8 @@
                 <div class="mb-3">
                     <label>Meta Title :</label>
                     <input type="text" name="meta_title"
-                        value="{{ isset($post->meta_title) ? $post->meta_title : old('meta_title') }}" class="form-control">
+                        value="{{ isset($post->meta_title) ? $post->meta_title : old('meta_title') }}"
+                        class="form-control">
                 </div>
                 <div class="mb-3">
                     <label>Meta Description :</label>

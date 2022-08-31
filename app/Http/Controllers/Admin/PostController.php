@@ -52,7 +52,7 @@ class PostController extends Controller
     {
         $categories = Category::all();
         $post = Post::findOrFail($id);
-        return view('admin.post.create', compact('post','categories'));
+        return view('admin.post.create', compact('post', 'categories'));
     }
     public function update(PostFormRequest $request, $id)
     {
