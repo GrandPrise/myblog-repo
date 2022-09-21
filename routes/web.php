@@ -22,10 +22,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::prefix('admin')
-//     ->middleware(['auth', 'isAdmin'])
-//     ->group(function () {
-//         Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+Route::prefix('admin')
+    ->middleware(['auth', 'isAdmin'])
+    ->group(function () {
+        Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
 
 //         Route::get('categories', [App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('categories');
 //         Route::get('add-category', [App\Http\Controllers\Admin\CategoryController::class, 'create'])->name('add-category');
@@ -42,4 +42,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //         Route::get('edit-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'edit'])->name('edit-post');
 //         Route::put('edit-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'update']);
 //         Route::delete('delete-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'destroy'])->name('delete-post');
-//     });
+    });

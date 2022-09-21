@@ -7,39 +7,40 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
+                {{-- Order --}}
                 <div class="sb-sidenav-menu-heading">Interface</div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
-                    aria-expanded="false" aria-controls="collapseLayouts">
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOrder"
+                    aria-expanded="false" aria-controls="collapseOrder">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                    Categories
+                    Orders
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                <div class="collapse" id="collapseOrder" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ route('add-category') }}">Add Category</a>
-                        <a class="nav-link" href="{{ route('categories') }}">View Category</a>
+                        <a class="nav-link" href="#">Add Order</a>
+                        <a class="nav-link" href="#">View Order</a>
                     </nav>
                 </div>
-
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePosts"
-                    aria-expanded="false" aria-controls="collapsePosts">
+                {{-- Deliveries --}}
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                    data-bs-target="#collapseDelivery" aria-expanded="false" aria-controls="collapseDelivery">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                    Posts
+                    Deliveries
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapsePosts" aria-labelledby="headingOne"
+                <div class="collapse" id="collapseDelivery" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ route('add-post') }}">Add Post</a>
-                        <a class="nav-link" href="{{ route('posts') }}">View post</a>
+                        <a class="nav-link" href="">Add Delivery</a>
+                        <a class="nav-link" href="">View Delivery</a>
                     </nav>
                 </div>
 
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
                     aria-expanded="false" aria-controls="collapsePages">
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                    Pages
+                    Stats
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
