@@ -19,17 +19,14 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check()){
-            if(Auth::user()->role_as=='1'){
-                  return $next($request);
+        if (Auth::check()) {
+            if (Auth::user()->role_as == '1' || Auth::user()->role_as == '2') {
+                return $next($request);
+            } else {
+                return redirect('/home')->with('error', 'Access Denied: You Do Not Have The Permission!');
             }
-            else{
-                return redirect('/home')->with('error','Access Denied: You are not an Admin!');
-            }
+        } else {
+            return redirect('/login')->with('status', 'You need to login first');
         }
-        else{
-            return redirect('/login')->with('status','You need to login first');
-        }
-      
     }
 }

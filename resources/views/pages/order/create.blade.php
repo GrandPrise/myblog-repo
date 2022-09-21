@@ -5,7 +5,7 @@
     <div class="container-fluid px-4">
         <div class="card mt-4">
             <div class="card-header">
-                <a href="{{ route('orders') }}" class="btn btn-danger btn-sm float-end">Back</a>
+                <a href="#" class="btn btn-danger btn-sm float-end">Back</a>
                 <h4 class="">Ajouter Commande</h4>
             </div>
             <div class="card-body">
@@ -18,30 +18,35 @@
                     <x-validation-errors :errors='$errors' />
                     @csrf
                     <div class="mb-3">
-                        <label for="name">Nom Client :</label>
+                        <label for="client">Nom Client :</label>
                         <input type="text" name="client" id="client" placeholder="Nom de Client"
                             value="{{ isset($order->client) ? $order->client : old('client') }}" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="slug">Numéro de Téléphone :</label>
+                        <label for="phone_number">Numéro de Téléphone :</label>
                         <input type="text" name="phone_number" id="phone_number" placeholder="06--------"
                             value="{{ isset($order->phone_number) ? $order->phone_number : old('phone_number') }}"
                             class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="slug">Numéro WhatsApp :</label>
+                        <label for="whatsapp_number">Numéro WhatsApp :</label>
                         <input type="text" name="whatsapp_number" id="whatsapp_number" placeholder="06--------"
                             value="{{ isset($order->whatsapp_number) ? $order->whatsapp_number : old('whatsapp_number') }}"
                             class="form-control">
                     </div>
                     <div class="mb-3">
+                        <label for="ville">Ville :</label>
+                        <input type="text" name="city" id="city" placeholder="Ville"
+                            value="{{ isset($order->city) ? $order->city : old('city') }}" class="form-control">
+                    </div>
+                    {{-- <div class="mb-3">
                         <label for="name">Ville :</label>
                         <select name="ville" class="form-control" required>
                             <option value="city">Fes</option>
                             <option value="city">Casa</option>
                             <option value="city">Rabat</option>
                         </select>
-                    </div>
+                    </div> --}}
                     <div class="mb-3">
                         <label for="name">Adresse :</label>
                         <input type="text" name="address" id="address" placeholder="Adresse"

@@ -25,8 +25,8 @@ class OrderFormRequest extends FormRequest
     {
         $rules = [
             'client' => 'required|string',
-            'phone_number' => 'required|string|max:10|min:10|regex:^(06|07)+([0-9]{8})$',
-            'whatsapp_number' => 'required|string|max:10|min:10|regex:^(06|07)+([0-9]{8})$',
+            'phone_number' => 'required|string|max:10|min:10',
+            'whatsapp_number' => 'required|string|max:10|min:10',
             'city' => 'required|string|max:100',
             'address' => 'required|string',
             'item' => 'required|string|max:100',

@@ -22,7 +22,7 @@ class OrderController extends Controller
 
     public function store(OrderFormRequest $request)
     {
-        $data = $request->validate();
+        $data = $request->validated();
         $order = new Order();
         $order->client = $data['client'];
         $order->phone_number = $data['phone_number'];
