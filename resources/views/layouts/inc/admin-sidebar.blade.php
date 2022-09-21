@@ -18,7 +18,7 @@
                 <div class="collapse" id="collapseOrder" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="#">Add Order</a>
+                        <a class="nav-link" href="{{ route('add-order') }}">Add Order</a>
                         <a class="nav-link" href="#">View Order</a>
                     </nav>
                 </div>
