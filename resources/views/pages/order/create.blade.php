@@ -64,23 +64,12 @@
                             value="{{ isset($order->total_price) ? $order->total_price : old('total_price') }}"
                             class="form-control">
                     </div>
-
                     <div class="mb-3">
                         <label for="remark">Remarque(s) :</label>
                         <textarea name="remark" id="remark" rows="5" class="form-control">
                         {{ isset($order->remark) ? $order->remark : old('remark') }}
                     </textarea>
                     </div>
-                    {{-- <strong>Status Mode</strong>
-                    <div class="row">
-                        <div class="col-md-3 mb-3">
-                            <label for="">Status</label>
-                            <input type="checkbox" value="1" name="status">
-                        </div>
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary">Save order</button>
-                        </div>
-                    </div> --}}
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-primary">Ajouter</button>
                     </div>
@@ -88,5 +77,4 @@
             </div>
         </div>
     </div>
-
 @endsection
